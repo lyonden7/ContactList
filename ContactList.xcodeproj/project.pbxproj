@@ -12,6 +12,11 @@
 		28425D46295328C50079D529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28425D44295328C50079D529 /* Main.storyboard */; };
 		28425D48295328C80079D529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28425D47295328C80079D529 /* Assets.xcassets */; };
 		28425D4B295328C80079D529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28425D49295328C80079D529 /* LaunchScreen.storyboard */; };
+		28425D5C29532E390079D529 /* PersonsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D5B29532E390079D529 /* PersonsListViewController.swift */; };
+		28425D5E29532E4A0079D529 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D5D29532E4A0079D529 /* ListDetailViewController.swift */; };
+		28425D6029532E600079D529 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D5F29532E600079D529 /* ContactDetailViewController.swift */; };
+		28425D6229532FE30079D529 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D6129532FE30079D529 /* Person.swift */; };
+		28425D642953CA5C0079D529 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D632953CA5C0079D529 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		28425D47295328C80079D529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28425D4A295328C80079D529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28425D4C295328C80079D529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28425D5B29532E390079D529 /* PersonsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListViewController.swift; sourceTree = "<group>"; };
+		28425D5D29532E4A0079D529 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		28425D5F29532E600079D529 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		28425D6129532FE30079D529 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		28425D632953CA5C0079D529 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,10 @@
 		28425D5529532AAC0079D529 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				28425D5B29532E390079D529 /* PersonsListViewController.swift */,
+				28425D5F29532E600079D529 /* ContactDetailViewController.swift */,
+				28425D5D29532E4A0079D529 /* ListDetailViewController.swift */,
+				28425D632953CA5C0079D529 /* TabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -100,6 +114,7 @@
 		28425D5629532AC40079D529 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28425D6129532FE30079D529 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +192,11 @@
 			files = (
 				28425D3F295328C50079D529 /* AppDelegate.swift in Sources */,
 				28425D41295328C50079D529 /* SceneDelegate.swift in Sources */,
+				28425D5C29532E390079D529 /* PersonsListViewController.swift in Sources */,
+				28425D6229532FE30079D529 /* Person.swift in Sources */,
+				28425D642953CA5C0079D529 /* TabBarController.swift in Sources */,
+				28425D6029532E600079D529 /* ContactDetailViewController.swift in Sources */,
+				28425D5E29532E4A0079D529 /* ListDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
