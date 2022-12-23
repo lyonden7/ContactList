@@ -19,43 +19,35 @@ struct Person {
 
 // MARK: - Extension - get instance
 extension Person {
-    static func getPerson() -> [Person] {
+    static func getPersons() -> [Person] {
         var persons: [Person] = []
-        let dataStore = DataStore()
+        let dataStore = DataStore.shared
         
-        dataStore.names.shuffle()
-        dataStore.surnames.shuffle()
+        let names = dataStore.names.shuffled()
+        let surnames = dataStore.surnames.shuffled()
 
-        for item in 0..<dataStore.names.count {
-            dataStore.emails.append("\(dataStore.names[item])_\(dataStore.surnames[item])@icloud.com".lowercased())
+        for index in 0..<names.count {
+            dataStore.emails.append("\(names[index])_\(surnames[index])@icloud.com".lowercased())
         }
         
-        for _ in 0..<dataStore.names.count {
-            dataStore.phoneNumbers.append("+7495\(Int.random(in: 1000000...9999999))")
-        }
-        
-        for item in 0..<dataStore.names.count {
-            persons.append(
-                Person(
-                    name: dataStore.names[item],
-                    surname: dataStore.surnames[item],
-                    email: dataStore.emails[item],
-                    phoneNumber: dataStore.phoneNumbers[item]
-                )
+        for index in 0..<names.count {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: dataStore.emails[index],
+                phoneNumber: dataStore.phoneNumbers[index]
             )
+
+            persons.append(person)
         }
         
         return persons
     }
 }
 
-// MARK: - DataStore class
-class DataStore {
-    var names = ["John", "Sharon", "Aaron", "Steven", "Nikola", "Ted", "Bruce", "Carl", "Allan", "Tim"]
-    var surnames = ["Smith", "Dow", "Isaacson", "Pennyworth", "Jankins", "Murphy", "Williams", "Black", "Robertson", "Butler"]
-    
-    /// Массив заполянется в методе getPerson(), основываясь на полученных перемешанных именах и фамилиях
-    var emails: [String] = []
-    /// Массив заполянется в методе getPerson() рандомными 7-значными числами с заготовленным префиксом +7495
-    var phoneNumbers: [String] = []
+enum Contacts: String {
+    case phone = "phone"
+    case email = "tray"
 }
+
+

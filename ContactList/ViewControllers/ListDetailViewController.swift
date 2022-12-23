@@ -26,24 +26,23 @@ class ListDetailViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let phoneNumberCell = tableView.dequeueReusableCell(withIdentifier: "phoneNumberCell", for: indexPath)
-        let emailCell = tableView.dequeueReusableCell(withIdentifier: "emailCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         let person = persons[indexPath.section]
+        var content = cell.defaultContentConfiguration()
         
-        var phoneNumberContent = phoneNumberCell.defaultContentConfiguration()
-        var emailContent = emailCell.defaultContentConfiguration()
+        switch indexPath.row {
+        case 0:
+            content.text = person.phoneNumber
+            content.image = UIImage(systemName: Contacts.phone.rawValue)
+        default:
+            content.text = person.email
+            content.image = UIImage(systemName: Contacts.email.rawValue)
+        }
         
-        phoneNumberContent.text = person.phoneNumber
-        phoneNumberContent.image = UIImage(systemName: "phone")
-        
-        emailContent.text = person.email
-        emailContent.image = UIImage(systemName: "tray")
-        
-        phoneNumberCell.contentConfiguration = phoneNumberContent
-        emailCell.contentConfiguration = emailContent
+        cell.contentConfiguration = content
 
-        return indexPath.row == 0 ? phoneNumberCell : emailCell
+        return cell
     }
     
     // MARK: - Table view delegate
