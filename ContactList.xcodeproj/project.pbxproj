@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281BF7D82956173300B9CE4C /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281BF7D72956173300B9CE4C /* HeaderViewCell.swift */; };
 		28425D3F295328C50079D529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D3E295328C50079D529 /* AppDelegate.swift */; };
 		28425D41295328C50079D529 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28425D40295328C50079D529 /* SceneDelegate.swift */; };
 		28425D46295328C50079D529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28425D44295328C50079D529 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		281BF7D72956173300B9CE4C /* HeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
 		28425D3B295328C50079D529 /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28425D3E295328C50079D529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28425D40295328C50079D529 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281BF7D62956171200B9CE4C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				281BF7D72956173300B9CE4C /* HeaderViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		28425D32295328C50079D529 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		28425D3D295328C50079D529 /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
+				281BF7D62956171200B9CE4C /* Views */,
 				28425D5529532AAC0079D529 /* ViewControllers */,
 				28425D5629532AC40079D529 /* Models */,
 				28425D6529559E510079D529 /* Services */,
@@ -204,6 +215,7 @@
 				28425D3F295328C50079D529 /* AppDelegate.swift in Sources */,
 				28425D6729559E660079D529 /* DataStore.swift in Sources */,
 				28425D41295328C50079D529 /* SceneDelegate.swift in Sources */,
+				281BF7D82956173300B9CE4C /* HeaderViewCell.swift in Sources */,
 				28425D5C29532E390079D529 /* PersonsListViewController.swift in Sources */,
 				28425D6229532FE30079D529 /* Person.swift in Sources */,
 				28425D642953CA5C0079D529 /* TabBarController.swift in Sources */,

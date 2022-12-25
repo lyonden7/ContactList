@@ -15,6 +15,10 @@ struct Person {
     var fullName: String {
         "\(name) \(surname)"
     }
+    
+    var rows: [String] {
+        [phoneNumber, email]
+    }
 }
 
 // MARK: - Extension - get instance
